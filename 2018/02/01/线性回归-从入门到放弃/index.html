@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LinBaiJiong">
 <meta property="og:description" content="我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-01T08:27:04.219Z">
+<meta property="og:updated_time" content="2018-02-01T09:18:34.551Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性回归--从入门到放弃">
 <meta name="twitter:description" content="我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。">
@@ -628,6 +628,26 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
