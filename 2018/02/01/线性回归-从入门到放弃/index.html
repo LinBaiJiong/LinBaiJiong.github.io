@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LinBaiJiong">
 <meta property="og:description" content="我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。 简单地说，线性回归试图找到一条直线$f(x)=wx+b$，使得$f(x^">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-02T06:08:54.487Z">
+<meta property="og:updated_time" content="2018-02-02T12:51:42.105Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性回归--从入门到放弃">
 <meta name="twitter:description" content="我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。 简单地说，线性回归试图找到一条直线$f(x)=wx+b$，使得$f(x^">
@@ -316,7 +316,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  644
+                  640
                 </span>
                 <span>字</span>
               
@@ -358,7 +358,7 @@
 <p>简单地说，线性回归试图找到一条直线$f(x)=wx+b$，使得$f(x^{(i)})$与$y^{(i)}$尽可能的接近。这里直线的函数表达式f(x)是我们建立的模型(model)，而w,b则是模型中的参数，我们要对参数w和b做估计，使得整体的模型达到最优。</p>
 <p>因此，基于上述的分析，我们可以构造一个目标/代价函数(cost function or loss function)：</p>
 <script type="math/tex; mode=display">
-L(w,b)=\sum_{i=1}^{n} (f(x^{(i)})-y^{(i)})^2=\sum_{i=1}^{n} (wx^{(i)}+b-y^{(i)})^2</script><p>这里，我们是采用$f(x^{(i)})$和$y^{(i)}$的均方误差(即预测值和真实值的均方误差)作为模型的性能度量,显然，参数w和b最佳的解$w^<em>,b^</em>$应该是：</p>
+L(w,b)=\sum_{i=1}^{n} (f(x^{(i)})-y^{(i)})^2=\sum_{i=1}^{n} (wx^{(i)}+b-y^{(i)})^2</script><p>这里，我们是采用$f(x^{(i)})$和$y^{(i)}$的均方误差(即预测值和真实值的均方误差)作为模型的性能度量,显然，参数w和b最佳的解是：</p>
 <script type="math/tex; mode=display">
 (w^*,b^*)=\arg \min_{w,b} L(w,b)</script><p>事实上，均方误差在几何上对应着欧式距离,因此我们最小化$L(w,b)$求出最优的参数，相当于找到一条直线，使得所有样本点到该直线的欧式距离之和最小。</p>
 <p>我们注意到(1)式的函数是一个下凸函数(类似于一个开口向上的二次函数)，即L偏导数为0的点为最优解，推导过程如下：</p>
@@ -640,7 +640,7 @@ f(\textbf{x}^{(i)})=\textbf{w}^{T} \textbf{x}^{(i)}+b</script><p>其中$\textbf{
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">644</span>
+    <span title="Site words total count">640</span>
   
 </div>
 
