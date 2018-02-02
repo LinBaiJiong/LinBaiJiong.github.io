@@ -310,80 +310,15 @@
       
         
           
-            <p>我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。</p>
-<p><code>&lt; !--more--&gt;</code></p>
-<p>简单地说，线性回归试图找到一条直线$f(x)=wx+b$，使得$f(x^{(i)})$与$y^{(i)}$尽可能的接近。这里直线的函数表达式f(x)是我们建立的模型(model)，而w,b则是模型中的参数，我们要对参数w和b做估计，使得整体的模型达到最优。</p>
-<p>因此，基于上述的分析，我们可以构造一个目标/代价函数(cost function or loss function)：</p>
-<script type="math/tex; mode=display">
-L(w,b)=\sum_{i=1}^{n} (f(x^{(i)})-y^{(i)})^2=\sum_{i=1}^{n} (wx^{(i)}+b-y^{(i)})^2</script><p>这里，我们是采用$f(x^{(i)})$和$y^{(i)}$的均方误差(即预测值和真实值的均方误差)作为模型的性能度量,显然，参数w和b最佳的解$w^<em>,b^</em>$应该是：</p>
-<script type="math/tex; mode=display">
-(w^*,b^*)=\arg \min_{w,b} L(w,b)</script><p>事实上，均方误差在几何上对应着欧式距离,因此我们最小化$L(w,b)$求出最优的参数，相当于找到一条直线，使得所有样本点到该直线的欧式距离之和最小。</p>
-<p>我们注意到(1)式的函数是一个下凸函数(类似于一个开口向上的二次函数)，即L偏导数为0的点为最优解，推导过程如下：</p>
-<script type="math/tex; mode=display">
-\begin{equation}
-     \begin{aligned}
-     \frac{\partial L(w,b)}{\partial w}&=2\sum_{i=1}^{n}[(wx^{(i)}+b-y^{(i)})*x^{(i)}]\\
-     &=2\sum_{i=1}^{n}w(x^{(i)})^2+2\sum_{i=1}^{n}(b-y^{(i)})x^{(i)}
-     \end{aligned}
-     \end{equation}</script><script type="math/tex; mode=display">
-\begin{equation}
-     \begin{aligned}
-     \frac{\partial L(w,b)}{\partial b}&=2\sum_{i=1}^{n}[(wx^{(i)}+b-y^{(i)})]\\
-     &=2nb+2\sum_{i=1}^{n}(wx^{(i)}-y^{(i)})
-     \end{aligned}
-     \end{equation}</script><p>联立(3)(4)式，即可解得：</p>
-<script type="math/tex; mode=display">
-\begin{equation}
-         w^*=\frac{\sum_{i=1}^{n}y^{(i)}(x^{(i)}-\bar{x})}
-         {\sum_{i=1}^{n}(x^{(i)})^2-\frac{1}{n}(\sum_{i=1}^{n}(x^{(i)})^2)}
-     \end{equation}</script><script type="math/tex; mode=display">
-     \begin{equation}
-         b^*=\frac{1}{n}\sum_{i=1}^{n}(y^{(i)}-w^{*}x^{(i)})
-     \end{equation}</script><p>其中$\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x^{(i)}$</p>
-<p>下面我们讨论一种更为一般的情况，假设我们$x^{(i)}$由d个属性描述，即$\textbf{x}^{(i)}=(x^{(i)}_1,x^{(i)}_2,\dots,x^{(i)}_d)^{T}$,类似地，我们试图学得：</p>
-<script type="math/tex; mode=display">
-f(\textbf{x}^{(i)})=w_1 x^{(i)}_1 +w_2 x^{(i)}_2+\dots+
-         w_d x^{(i)}_d+b</script><p>我们可以简化为向量形式：</p>
-<script type="math/tex; mode=display">
-f(\textbf{x}^{(i)})=\textbf{w}^{T} \textbf{x}^{(i)}+b</script><p>其中$\textbf{w}=(w_1,w_2,\dots,w_d)^{T}$</p>
-<p>在不引起混淆的情况下，我们大可这样简化(8)式:</p>
-<script type="math/tex; mode=display">
-\begin{equation}
-         f(\textbf{x}^{(i)})=\textbf{w}^{T} \textbf{x}^{(i)}
-     \end{equation}</script><p>其中$\textbf{x}^{(i)}=(1,x^{(i)}_1,x^{(i)}_2,\dots,x^{(i)}_d)^{T}$,$\textbf{w}=(w_0,w_1,w_2,\dots,w_d)^{T}$,这里的$w_0$就相当于(8)式的b。(注意这里$\textbf{x}^{(i)},\textbf{w}$的维数)</p>
-<p>我们把所有的$\textbf{x}^{(i)}$合并成矩阵$\textbf{X}$：</p>
-<script type="math/tex; mode=display">
-\begin{equation*}
-     \textbf{X}=(\textbf{x}^{(1)},\textbf{x}^{(2)},\dots,\textbf{x}^{(n)})=
-         \begin{pmatrix}
-         1 & 1 & \cdots & 1 \\
-         x^{(1)}_1 & x^{(2)}_1 & \cdots & x^{(n)}_1 \\
-         x^{(1)}_2 & x^{(2)}_2 & \cdots & x^{(n)}_2 \\
-         \vdots & \vdots & \quad & \vdots  \\
-         x^{(1)}_d & x^{(2)}_d & \cdots & x^{(n)}_d 
-         \end{pmatrix}
-     \end{equation*}</script><p>同样的，令$\textbf{y}=(y^{(1)},y^{(2)},\dots,y^{(n)})^{T}$</p>
-<p>类似(1)式，我们构造一个代价函数:</p>
-<script type="math/tex; mode=display">
-\begin{equation}
-         L(\textbf{w})=(\textbf{w}^{T}\textbf{X}-\textbf{y})^{T}
-         (\textbf{w}^{T}\textbf{X}-\textbf{y})
-     \end{equation}</script><p>同样的，我们对$L(\textbf{w})$关于$\textbf{w}$求偏导数：</p>
-<script type="math/tex; mode=display">
-\begin{equation}
-     \begin{aligned}
-     \frac{\partial L(\textbf{w})}{\partial \textbf{w}}
-     &=2((\textbf{w}^{T}\textbf{X}-\textbf{y}) \frac{\partial (\textbf{w}^{T}\textbf{X}-\textbf{y})}{\partial \textbf{w}})\\
-     &=2((\textbf{w}^{T}\textbf{X}-\textbf{y})\textbf{X}^{T})\\
-     &=2\textbf{w}^{T}\textbf{X}\textbf{X}^{T}-2\textbf{y}\textbf{X}^{T}
-     \end{aligned}
-     \end{equation}</script><p>令(11)式为0，解得：</p>
-<script type="math/tex; mode=display">
-\begin{equation}
-         \textbf{w}=(\textbf{X}^{T}\textbf{X})^{-1}\textbf{X}\textbf{y}^{T}
-     \end{equation}</script><p>注意：由(11)式为0解出(12)式的前提要求$\textbf{X}^{T}\textbf{X}$是可逆的</p>
-
-          
+          我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/01/线性回归-从入门到放弃/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
