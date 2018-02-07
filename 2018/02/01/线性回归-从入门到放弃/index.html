@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="一元线性回归我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。 简单地说，线性回归试图找到一条直线$f(x)=wx+b$，使">
+<meta name="description" content="前言线性回归(Linear Regression)模型是机器学习的入门，本文解法的基础是最小二乘法，这在高中我们已经学习过了，当然在以后我们会使用新的方法如极大似然估计(MLE)和最大后验估计(MAP)。多元线性回归会稍微复杂一些，这涉及到向量化的思想。">
 <meta name="keywords" content="机器学习">
 <meta property="og:type" content="article">
 <meta property="og:title" content="线性回归--从入门到放弃">
 <meta property="og:url" content="http://LinBaiJiong.github.io/2018/02/01/线性回归-从入门到放弃/index.html">
 <meta property="og:site_name" content="LinBaiJiong">
-<meta property="og:description" content="一元线性回归我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。 简单地说，线性回归试图找到一条直线$f(x)=wx+b$，使">
+<meta property="og:description" content="前言线性回归(Linear Regression)模型是机器学习的入门，本文解法的基础是最小二乘法，这在高中我们已经学习过了，当然在以后我们会使用新的方法如极大似然估计(MLE)和最大后验估计(MAP)。多元线性回归会稍微复杂一些，这涉及到向量化的思想。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T06:23:09.366Z">
+<meta property="og:updated_time" content="2018-02-07T06:46:00.482Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性回归--从入门到放弃">
-<meta name="twitter:description" content="一元线性回归我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。 简单地说，线性回归试图找到一条直线$f(x)=wx+b$，使">
+<meta name="twitter:description" content="前言线性回归(Linear Regression)模型是机器学习的入门，本文解法的基础是最小二乘法，这在高中我们已经学习过了，当然在以后我们会使用新的方法如极大似然估计(MLE)和最大后验估计(MAP)。多元线性回归会稍微复杂一些，这涉及到向量化的思想。">
 
 
 
@@ -316,7 +316,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  652
+                  933
                 </span>
                 <span>字</span>
               
@@ -333,7 +333,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
                 <span>分钟</span>
               
@@ -354,7 +354,9 @@
       
 
       
-        <h4 id="一元线性回归"><a href="#一元线性回归" class="headerlink" title="一元线性回归"></a>一元线性回归</h4><p>我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。</p>
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>线性回归(Linear Regression)模型是机器学习的入门，本文解法的基础是最小二乘法，这在高中我们已经学习过了，当然在以后我们会使用新的方法如极大似然估计(MLE)和最大后验估计(MAP)。多元线性回归会稍微复杂一些，这涉及到向量化的思想。</p>
+<a id="more"></a>
+<h4 id="一元线性回归"><a href="#一元线性回归" class="headerlink" title="一元线性回归"></a>一元线性回归</h4><p>我们从最简单的一元线性回归开始，假设数据集$D=\{(x^{(1)},y^{(1)}),(x^{(2)},y^{(2)}),\dots,(x^{(n)},y^{(n)})\}$，我们可以画出这n个样本点的散点图，线性回归的目标就是找到一条恰当的直线来拟合这些样本点，从而当我们有一个新的样本点的x时，我们可以预测出对应的y值。</p>
 <p>简单地说，线性回归试图找到一条直线$f(x)=wx+b$，使得$f(x^{(i)})$与$y^{(i)}$尽可能的接近。这里直线的函数表达式f(x)是我们建立的模型(model)，而w,b则是模型中的参数，我们要对参数w和b做估计，使得整体的模型达到最优。</p>
 <p>因此，基于上述的分析，我们可以构造一个目标/代价函数(cost function or loss function)：</p>
 <script type="math/tex; mode=display">
@@ -386,7 +388,7 @@ L(w,b)=\sum_{i=1}^{n} (f(x^{(i)})-y^{(i)})^2=\sum_{i=1}^{n} (wx^{(i)}+b-y^{(i)})
      \end{equation}</script><script type="math/tex; mode=display">
 \begin{equation}
          b^*=\frac{1}{n}\sum_{i=1}^{n}(y^{(i)}-w^{*}x^{(i)})
-     \end{equation}</script><p>其中$\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x^{(i)}$</p>
+     \end{equation}</script><p>其中$\bar{x}=\frac{1}{n}\sum_{i=1}^{n}x^{(i)}$，这也就是我们的最小二乘法。</p>
 <h4 id="多元线性回归"><a href="#多元线性回归" class="headerlink" title="多元线性回归"></a>多元线性回归</h4><p>下面我们讨论一种更为一般的情况，假设我们$x^{(i)}$由d个属性描述，即$\textbf{x}^{(i)}=(x^{(i)}_1,x^{(i)}_2,\dots,x^{(i)}_d)^{T}$,类似地，我们试图学得：</p>
 <script type="math/tex; mode=display">
 \begin{equation}
@@ -433,6 +435,7 @@ f(\textbf{x}^{(i)})=\textbf{w}^{T} \textbf{x}^{(i)}+b
 \begin{equation}
          \textbf{w}=(\textbf{X}^{T}\textbf{X})^{-1}\textbf{X}\textbf{y}^{T}
      \end{equation}</script><p>注意：由(11)式为0解出(12)式的前提要求$\textbf{X}^{T}\textbf{X}$是可逆的</p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>线性回归模型虽然简单，但整个解法体现了机器学习尤其是监督学习模型解法的一个固定套路—对目标函数做最优化(当然这是一种频率派的解法，我们还会有贝叶斯学派的做法)；多元线性回归的向量化思想也是十分重要。并且许多功能更为强大的非线性模型可在线性模型的基础上通过引入层级结构或者高位映射得到，比如说我们把一个线性组合映射到[0,1]上，那我们可以得到一个二分类模型(即逻辑回归)。</p>
 
       
     </div>
@@ -653,7 +656,7 @@ f(\textbf{x}^{(i)})=\textbf{w}^{T} \textbf{x}^{(i)}+b
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#一元线性回归"><span class="nav-number">1.</span> <span class="nav-text">一元线性回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多元线性回归"><span class="nav-number">2.</span> <span class="nav-text">多元线性回归</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一元线性回归"><span class="nav-number">2.</span> <span class="nav-text">一元线性回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#多元线性回归"><span class="nav-number">3.</span> <span class="nav-text">多元线性回归</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -689,7 +692,7 @@ f(\textbf{x}^{(i)})=\textbf{w}^{T} \textbf{x}^{(i)}+b
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.3k</span>
+    <span title="Site words total count">1.5k</span>
   
 </div>
 
