@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LinBaiJiong">
 <meta property="og:description" content="前言GPLT天梯赛练习题：https://www.patest.cn/contests/gplt CPP代码文件存放在Github上：https://github.com/LinBaiJiong/GPLT 在此记录下我对题目的整个思考过程：从错误到完全正确 如果你只想看最终代码，请下拉到最后一个版本的思路或者直接在我的Github上下载，网址在上方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-16T14:18:16.874Z">
+<meta property="og:updated_time" content="2018-02-16T14:24:44.028Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="L1-006. 连续因子">
 <meta name="twitter:description" content="前言GPLT天梯赛练习题：https://www.patest.cn/contests/gplt CPP代码文件存放在Github上：https://github.com/LinBaiJiong/GPLT 在此记录下我对题目的整个思考过程：从错误到完全正确 如果你只想看最终代码，请下拉到最后一个版本的思路或者直接在我的Github上下载，网址在上方">
@@ -326,7 +326,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,159
+                  1,152
                 </span>
                 <span>字</span>
               
@@ -374,14 +374,15 @@
 <p><strong>输入格式：</strong></p>
 <p>输入在一行中给出一个正整数N（1&lt;N&lt;$2^{31}$）。</p>
 <p><strong>输出格式：</strong></p>
-<p>首先在第1行输出最长连续因子的个数；然后在第2行中按“因子1$<em>$因子2$</em>$……$*$因子k”的格式输出最小的连续因子序列，其中因子按递增顺序输出，1不算在内。</p>
+<p>首先在第1行输出最长连续因子的个数；然后在第2行中按“$因子1<em>因子2</em>\dots*因子k$”的格式输出最小的连续因子序列，其中因子按递增顺序输出，1不算在内。</p>
 <p>输入样例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 630</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
-<p>&gt;</p>
 <blockquote>
+<p>630</p>
+</blockquote>
 <p>输出样例：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; 3</span><br><span class="line">&gt; 5*6*7</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>3<br>$5<em>6</em>7$</p>
+</blockquote>
 </blockquote>
 <h5 id="思路1-0"><a href="#思路1-0" class="headerlink" title="思路1.0"></a>思路1.0</h5><p>这个题应该是前面六个里面最难的，我们依旧对整个问题进行分解。</p>
 <p>(1)输入的数据要用什么来存放，毕竟$2^{31}$也是挺大的</p>
