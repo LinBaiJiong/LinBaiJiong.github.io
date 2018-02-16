@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="C++,GPLT天梯赛," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="Name EN: xuezha.lin | CN：学渣渣 Educated 2016至今：华南师范大学 数学科学学院 信息与计算科学 Interest 数据挖掘、机器学习、贝叶斯分析 Contact Github:clik here E-mail: xuezha.lin@gmail.com bilibili: clik here">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于我">
-<meta property="og:url" content="http://LinBaiJiong.github.io/about/index.html">
+<meta name="description" content="前言GPLT天梯赛练习题：https://www.patest.cn/contests/gplt CPP代码文件存放在Github上：https://github.com/LinBaiJiong/GPLT 在此记录下我对题目的整个思考过程：从错误到完全正确 如果你只想看最终代码，请下拉到最后一个版本的思路或者直接在我的Github上下载，网址在上方">
+<meta name="keywords" content="C++,GPLT天梯赛">
+<meta property="og:type" content="article">
+<meta property="og:title" content="L1-004. 计算摄氏温度">
+<meta property="og:url" content="http://LinBaiJiong.github.io/2018/02/16/L1-004-计算摄氏温度/index.html">
 <meta property="og:site_name" content="LinBaiJiong">
-<meta property="og:description" content="Name EN: xuezha.lin | CN：学渣渣 Educated 2016至今：华南师范大学 数学科学学院 信息与计算科学 Interest 数据挖掘、机器学习、贝叶斯分析 Contact Github:clik here E-mail: xuezha.lin@gmail.com bilibili: clik here">
+<meta property="og:description" content="前言GPLT天梯赛练习题：https://www.patest.cn/contests/gplt CPP代码文件存放在Github上：https://github.com/LinBaiJiong/GPLT 在此记录下我对题目的整个思考过程：从错误到完全正确 如果你只想看最终代码，请下拉到最后一个版本的思路或者直接在我的Github上下载，网址在上方">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T09:23:28.718Z">
+<meta property="og:updated_time" content="2018-02-16T14:15:34.347Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于我">
-<meta name="twitter:description" content="Name EN: xuezha.lin | CN：学渣渣 Educated 2016至今：华南师范大学 数学科学学院 信息与计算科学 Interest 数据挖掘、机器学习、贝叶斯分析 Contact Github:clik here E-mail: xuezha.lin@gmail.com bilibili: clik here">
+<meta name="twitter:title" content="L1-004. 计算摄氏温度">
+<meta name="twitter:description" content="前言GPLT天梯赛练习题：https://www.patest.cn/contests/gplt CPP代码文件存放在Github上：https://github.com/LinBaiJiong/GPLT 在此记录下我对题目的整个思考过程：从错误到完全正确 如果你只想看最终代码，请下拉到最后一个版本的思路或者直接在我的Github上下载，网址在上方">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://LinBaiJiong.github.io/about/"/>
+  <link rel="canonical" href="http://LinBaiJiong.github.io/2018/02/16/L1-004-计算摄氏温度/"/>
 
 
 
 
 
-  <title>关于我 | LinBaiJiong</title>
+  <title>L1-004. 计算摄氏温度 | LinBaiJiong</title>
   
 
 
@@ -240,43 +241,242 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://LinBaiJiong.github.io/2018/02/16/L1-004-计算摄氏温度/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="学渣渣">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="LinBaiJiong">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">关于我</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p><u><strong>Name</strong></u></p>
-<p>EN: xuezha.lin | CN：学渣渣</p>
-<p><u><strong>Educated</strong></u></p>
-<p>2016至今：华南师范大学 数学科学学院 信息与计算科学</p>
-<p><u><strong>Interest</strong></u></p>
-<p>数据挖掘、机器学习、贝叶斯分析</p>
-<p><u><strong>Contact</strong></u></p>
-<p>Github:<a href="https://github.com/LinBaiJiong" target="_blank" rel="noopener">clik here</a></p>
-<p>E-mail: xuezha.lin@gmail.com</p>
-<p>bilibili: <a href="https://space.bilibili.com/189684044/#/" target="_blank" rel="noopener">clik here</a></p>
-
+          <h1 class="post-title" itemprop="name headline">L1-004. 计算摄氏温度</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-16T22:14:41+08:00">
+                2018-02-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/02/16/L1-004-计算摄氏温度/" class="leancloud_visitors" data-flag-title="L1-004. 计算摄氏温度">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数&#58;</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+             <span>次</span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  262
+                </span>
+                <span>字</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  1
+                </span>
+                <span>分钟</span>
+              
+            </div>
+          
+
+          
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h5 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h5><p>GPLT天梯赛练习题：<a href="https://www.patest.cn/contests/gplt" target="_blank" rel="noopener">https://www.patest.cn/contests/gplt</a></p>
+<p>CPP代码文件存放在Github上：<a href="https://github.com/LinBaiJiong/GPLT" target="_blank" rel="noopener">https://github.com/LinBaiJiong/GPLT</a></p>
+<p>在此记录下我对题目的整个思考过程：从错误到完全正确</p>
+<p>如果你只想看最终代码，请下拉到最后一个版本的思路或者直接在我的Github上下载，网址在上方</p>
+<a id="more"></a>
+<h5 id="原题欣赏"><a href="#原题欣赏" class="headerlink" title="原题欣赏"></a>原题欣赏</h5><blockquote>
+<p>给定一个华氏温度F，本题要求编写程序，计算对应的摄氏温度C。计算公式：C = 5*(F-32)/9。题目保证输入与输出均在整型范围内。</p>
+<p><strong>输入格式：</strong></p>
+<p>输入在一行中给出一个华氏温度。</p>
+<p><strong>输出格式：</strong></p>
+<p>在一行中按照格式“Celsius = C”输出对应的摄氏温度C的整数值。</p>
+<p>输入样例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; 150</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>&gt;</p>
+<blockquote>
+<p>输出样例：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; Celsius = 65</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
+</blockquote>
+<h5 id="思路1-0"><a href="#思路1-0" class="headerlink" title="思路1.0"></a>思路1.0</h5><p>这个题真的没简单，没什么好多说的ヽ(ー_ー)ノ</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> F;</span><br><span class="line">	<span class="built_in">cin</span>&gt;&gt;F;</span><br><span class="line">	<span class="keyword">int</span> C=<span class="number">5</span>*(F<span class="number">-32</span>)/<span class="number">9</span>;</span><br><span class="line">	<span class="built_in">cout</span>&lt;&lt;<span class="string">"Celsius = "</span>&lt;&lt;C&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
     
     
+
+    <div>
+    
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
+    </div>
+
+    
+
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    学渣渣
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://LinBaiJiong.github.io/2018/02/16/L1-004-计算摄氏温度/" title="L1-004. 计算摄氏温度">http://LinBaiJiong.github.io/2018/02/16/L1-004-计算摄氏温度/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i>C++</a>
+          
+            <a href="/tags/GPLT天梯赛/" rel="tag"><i class="fa fa-tag"></i>GPLT天梯赛</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/16/L1-003-个位数统计/" rel="next" title="L1-003. 个位数统计">
+                <i class="fa fa-chevron-left"></i> L1-003. 个位数统计
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/02/16/L1-005-考试座位号/" rel="prev" title="L1-005. 考试座位号">
+                L1-005. 考试座位号 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -314,8 +514,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -392,6 +601,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#原题欣赏"><span class="nav-number">2.</span> <span class="nav-text">原题欣赏</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#思路1-0"><span class="nav-number">3.</span> <span class="nav-text">思路1.0</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -732,6 +957,32 @@
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
