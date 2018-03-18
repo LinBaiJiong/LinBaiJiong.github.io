@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LinBaiJiong">
 <meta property="og:description" content="前言线性回归(Linear Regression)模型是机器学习的入门，本文解法的基础是最小二乘法，这在高中我们已经学习过了，当然在以后我们会使用新的方法如极大似然估计(MLE)和最大后验估计(MAP)。多元线性回归会稍微复杂一些，这涉及到向量化的思想。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T06:46:00.482Z">
+<meta property="og:updated_time" content="2018-03-18T12:10:04.984Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="线性回归--从入门到放弃">
 <meta name="twitter:description" content="前言线性回归(Linear Regression)模型是机器学习的入门，本文解法的基础是最小二乘法，这在高中我们已经学习过了，当然在以后我们会使用新的方法如极大似然估计(MLE)和最大后验估计(MAP)。多元线性回归会稍微复杂一些，这涉及到向量化的思想。">
@@ -394,7 +394,7 @@ L(w,b)=\sum_{i=1}^{n} (f(x^{(i)})-y^{(i)})^2=\sum_{i=1}^{n} (wx^{(i)}+b-y^{(i)})
 <script type="math/tex; mode=display">
 \begin{equation}
          w^*=\frac{\sum_{i=1}^{n}y^{(i)}(x^{(i)}-\bar{x})}
-         {\sum_{i=1}^{n}(x^{(i)})^2-\frac{1}{n}(\sum_{i=1}^{n}(x^{(i)})^2)}
+         {\sum_{i=1}^{n}(x^{(i)})^2-\frac{1}{n}(\sum_{i=1}^{n}x^{(i)})^2}
      \end{equation}</script><script type="math/tex; mode=display">
 \begin{equation}
          b^*=\frac{1}{n}\sum_{i=1}^{n}(y^{(i)}-w^{*}x^{(i)})
