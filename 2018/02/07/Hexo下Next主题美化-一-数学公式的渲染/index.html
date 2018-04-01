@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="LinBaiJiong">
 <meta property="og:description" content="前言 写技术博客经常遇到数学公式的编辑，使用Hexo+Github搭建的博客，在本地写的博客都是md格式的，因此我们需要一些操作，来渲染我们在Markdown上编辑的数学公式。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-02-07T09:34:18.887Z">
+<meta property="og:updated_time" content="2018-04-01T15:02:05.620Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo下Next主题美化(一)数学公式的渲染">
 <meta name="twitter:description" content="前言 写技术博客经常遇到数学公式的编辑，使用Hexo+Github搭建的博客，在本地写的博客都是md格式的，因此我们需要一些操作，来渲染我们在Markdown上编辑的数学公式。">
@@ -373,7 +373,7 @@
 <p>你可以在/node_modules里面搜索一下你是否安装了这两个插件</p>
 <p>（注意：不要安装pandoc插件，如果有，请卸载</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm uninstall hexo-renderer-pandoc --save</span><br></pre></td></tr></table></figure>
-<p>我因为这个插件而导致了node端口被占用出现node.js:141报错，当初查了很久也没找到原因，后来把这个插件一卸载就好了。。。）</p>
+<p>笔者因为这个插件而导致了node端口被占用出现node.js:141报错，当初查了很久也没找到原因，后来把这个插件一卸载就好了。。。）</p>
 <p>接下来找到/node_modules/kramed/lib/rules/inline.js把第11行的escape变量的值做相应的修改：</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line">  <span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
 <p>这一步是在原基础上取消了对\,{,}的转义(escape)。</p>
@@ -387,10 +387,10 @@
 <p>假如你不想每篇文章都手动打上mathjax: true，那么你可以在/scaffolds/post.md中修改，添加上mathjax这一项：</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">tags:</span><br><span class="line">mathjax:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>这样你每次写博客时Front-matter都会有这一项(实际上我们修改的就是博客Front-matter的模板)</p>
-<h4 id="显示数学公式序号"><a href="#显示数学公式序号" class="headerlink" title="显示数学公式序号"></a>显示数学公式序号</h4><p>我们经常需要对行间公式编序号，这样会方便我们的语言叙述(可能是习惯于LaTex)，要在我们博客上显示序号，只需要下面的操作：</p>
+<h4 id="显示数学公式序号"><a href="#显示数学公式序号" class="headerlink" title="显示数学公式序号"></a>显示数学公式序号</h4><p>我们经常需要对行间公式编序号，这样会方便我们的语言叙述(可能是习惯于$\LaTeX$)，要在我们博客上显示序号，只需要下面的操作：</p>
 <p>在/theme/next/layout/_third-party/mathjax.swig中加上下面这段代码</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/x-mathjax-config"</span>&gt;</span><br><span class="line">      MathJax.Hub.Config(&#123;</span><br><span class="line">        TeX: &#123; <span class="attr">equationNumbers</span>: &#123; <span class="attr">autoNumber</span>: <span class="string">"AMS"</span> &#125; &#125;</span><br><span class="line">      &#125;);</span><br><span class="line"> &lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
-<p>然后在markdown的tex公式编辑里面只要使用begin{equation}环境的公式就会被编号</p>
+<p>然后在markdown的tex公式编辑里面只要使用equation环境的公式就会被编号</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\begin&#123;equation&#125;</span><br><span class="line">\end&#123;equation&#125;</span><br></pre></td></tr></table></figure>
 
       
