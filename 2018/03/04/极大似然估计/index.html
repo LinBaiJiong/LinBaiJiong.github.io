@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="机器学习," />
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="LinBaiJiong">
-<meta property="og:url" content="http://LinBaiJiong.github.io/index.html">
+<meta name="description" content="前言极大似然估计(Maximum Likelihood Estimate)提供了一种给定观察数据来估计模型参数的方法，是一种经典的点估计方法，一句话总结极大似然估计：模型给定，参数未知。">
+<meta name="keywords" content="机器学习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="极大似然估计">
+<meta property="og:url" content="http://LinBaiJiong.github.io/2018/03/04/极大似然估计/index.html">
 <meta property="og:site_name" content="LinBaiJiong">
+<meta property="og:description" content="前言极大似然估计(Maximum Likelihood Estimate)提供了一种给定观察数据来估计模型参数的方法，是一种经典的点估计方法，一句话总结极大似然估计：模型给定，参数未知。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-05-04T02:45:56.654Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LinBaiJiong">
+<meta name="twitter:title" content="极大似然估计">
+<meta name="twitter:description" content="前言极大似然估计(Maximum Likelihood Estimate)提供了一种给定观察数据来估计模型参数的方法，是一种经典的点估计方法，一句话总结极大似然估计：模型给定，参数未知。">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://LinBaiJiong.github.io/"/>
+  <link rel="canonical" href="http://LinBaiJiong.github.io/2018/03/04/极大似然估计/"/>
 
 
 
 
 
-  <title>LinBaiJiong</title>
+  <title>极大似然估计 | LinBaiJiong</title>
   
 
 
@@ -140,8 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -234,181 +238,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://LinBaiJiong.github.io/2018/03/30/从GPLT总结C-C-的几种输入/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="学渣渣">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LinBaiJiong">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/30/从GPLT总结C-C-的几种输入/" itemprop="url">从GPLT总结C/C++的几种输入</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-30T18:33:17+08:00">
-                2018-03-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/03/30/从GPLT总结C-C-的几种输入/" class="leancloud_visitors" data-flag-title="从GPLT总结C/C++的几种输入">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-             <span>次</span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  420
-                </span>
-                <span>字</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-                <span>分钟</span>
-              
-            </div>
-          
-
-          
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>笔者准备参加2018.03.31的团体程序设计天梯赛，原本计划刷一刷GPLT的练习题，然而在各种课程和项目的摧残之下，从刷题计划变成看题计划。在我做过的二十几道题目中，笔者感到最困惑的是输入的格式，C++语法的输入显然不够用，常常需要借用C语法的输入。因此，特在此总结几种花式输入，以便日后查阅。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/30/从GPLT总结C-C-的几种输入/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -438,9 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/04/极大似然估计/" itemprop="url">极大似然估计</a></h1>
+          <h1 class="post-title" itemprop="name headline">极大似然估计</h1>
         
 
         <div class="post-meta">
@@ -534,190 +364,89 @@
       
 
       
-        
-          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>极大似然估计(Maximum Likelihood Estimate)提供了一种给定观察数据来估计模型参数的方法，是一种经典的<strong>点估计</strong>方法，一句话总结极大似然估计：<strong>模型给定，参数未知</strong>。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/03/04/极大似然估计/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    <div>
-    
-    </div>
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://LinBaiJiong.github.io/2018/02/07/Hexo下Next主题美化-一-数学公式的渲染/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="学渣渣">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LinBaiJiong">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/07/Hexo下Next主题美化-一-数学公式的渲染/" itemprop="url">Hexo下Next主题美化(一)数学公式的渲染</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-07T13:51:48+08:00">
-                2018-02-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/02/07/Hexo下Next主题美化-一-数学公式的渲染/" class="leancloud_visitors" data-flag-title="Hexo下Next主题美化(一)数学公式的渲染">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-             <span>次</span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  616
-                </span>
-                <span>字</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  3
-                </span>
-                <span>分钟</span>
-              
-            </div>
-          
-
-          
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><blockquote>
-<p>写技术博客经常遇到数学公式的编辑，使用Hexo+Github搭建的博客，在本地写的博客都是md格式的，因此我们需要一些操作，来渲染我们在Markdown上编辑的数学公式。</p>
+        <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>极大似然估计(Maximum Likelihood Estimate)提供了一种给定观察数据来估计模型参数的方法，是一种经典的<strong>点估计</strong>方法，一句话总结极大似然估计：<strong>模型给定，参数未知</strong>。</p>
+<a id="more"></a>
+<h4 id="似然函数"><a href="#似然函数" class="headerlink" title="似然函数"></a>似然函数</h4><p>似然函数：给定一个概率分布D，已知其PDF(概率密度函数)或者PMF(概率质量函数)为$f_{D}$，$\theta$是$f_{D}$的一个参数，从分布中抽取出n个独立的采样$\{\textbf{x}_1,\textbf{x}_2,\dots,\textbf{x}_n\}$，定义似然函数如下：</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+        L(\theta)=P(\textbf{x}_1,\textbf{x}_2,\dots,\textbf{x}_n|\theta)=f_D(\textbf{x}_1,\textbf{x}_2,\dots,\textbf{x}_n|\theta)=\prod_{i=1}^{n}P(\textbf{x}_i|\theta)
+\end{equation}</script><p>极大似然估计就是通过最大化似然函数估计出参数的值。</p>
+<p>(1)这里是每个$x_i$都是<strong>独立同分布(i.i.d)</strong>的，都服从概率分布D;</p>
+<p>(2)最大化似然函数估计出参数值实际上就是找到一个参数值使得$\{x_1,x_2,\dots,x_n\}$的联合概率最大。</p>
+<p>(3)在最大化似然函数的过程中，由于概率值一定是在$[0,1]$之间的，连乘易造成下溢，因此我们通常都会对似然函数取对数，称为<strong>对数似然</strong></p>
+<script type="math/tex; mode=display">
+\begin{equation}
+        \ln L(\theta)=\sum_{i=1}^{n}\ln P(\textbf{x}_i|\theta)
+    \end{equation}</script><h4 id="一个MLE的经典例子"><a href="#一个MLE的经典例子" class="headerlink" title="一个MLE的经典例子"></a>一个MLE的经典例子</h4><blockquote>
+<p>罐中有若干个除了颜色以外完全一样的小球，而且颜色只有黑白两种，我们想要知道白球的比例，但我们不能把罐中的球倒出来数。现在我们每次任意从已经摇匀的罐中拿一个球出来，记录球的颜色后，再把球放回罐中。假如前面一百次记录中，有七十次是白球，问罐中白球比例最可能是多少？我们都会很自然的认为答案是70$\%$，但我们该如何说明我们的猜想是正确的？下面我们用MLE的方法来推导。</p>
 </blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/07/Hexo下Next主题美化-一-数学公式的渲染/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<p>记随机变量X表示所抽取球的颜色，假设X=1表示白球，X=0表示黑球，则$X\sim b(p)$,p表示罐中白球的比例，记$\{x_1,x_2,\dots,x_{100}\}$为前面一百次记录的结果，那么似然函数为</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+        \begin{aligned}
+        L(p)&=P(x_1,x_2,\dots,x_{100}|p)\\
+        &=P(x_1|p)P(x_2|p) \dots P(x_{100}|p) \\
+        &=p^{70}(1-p)^{30}
+        \end{aligned}
+    \end{equation}</script><p>取对数$\ln L(p)=70\ln p+30\ln(1-p)$</p>
+<p>对对数似然求导</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    \frac{\partial \ln L(p)}{\partial p}=\frac{70}{p}-\frac{30}{1-p}
+    \end{equation}</script><p>令导数为0 ，求得最大值p=0.7.</p>
+<h4 id="极大似然估计与最小二乘法"><a href="#极大似然估计与最小二乘法" class="headerlink" title="极大似然估计与最小二乘法"></a>极大似然估计与最小二乘法</h4><p>我们记第i个真实值为$y^{(i)}$,第i个预测值$\hat{y}^{(i)}=\textbf{w}^{T}\textbf{x}^{(i)}$,其中$\textbf{x}^{(i)}=(x^{(i)}_1,x^{(i)}_2,\dots,x^{(i)}_d)^{T}$，误差$e=y-\hat{y}\sim \mathcal{N}(0,\sigma^2)$</p>
+<blockquote>
+<p>为什么这里误差设为均值为0的正态分布(Normal Distribution)，这里可以这样解释：根据中心极限定理，误差近似一个正态分布；而且当误差e=0时概率最大，当$e\to +\infty$时，概率很小甚至几乎为0。</p>
+</blockquote>
+<p>根据正态分布的概率密度函数(PDF)：</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    \begin{aligned}
+    f(e)&=\frac{1}{\sigma \sqrt{2\pi}}
+    \exp (-\frac{e^2}{2\sigma ^2})\\
+    &=\frac{1}{\sigma \sqrt{2\pi}}
+    \exp (-\frac{(y-\hat{y})^2}{2\sigma ^2})\\
+    \end{aligned}
+    \end{equation}</script><p>因此$y^{(i)}\sim \mathcal{N}(\hat{y}^{(i)},\sigma^2)=\mathcal{N}(\textbf{w}^{T}\textbf{x}^{(i)},\sigma^2)$ 是独立同分布的。</p>
+<p>我们可以写出似然函数:</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    \begin{aligned}
+    L(\textbf{w})&=P(\textbf{y}\vert \textbf{X};\textbf{w};\sigma)\\
+    &=\prod_{i=1}^{n} \mathcal{N}(\textbf{w}^{T}\textbf{x}^{(i)},\sigma^2)\\
+    \end{aligned}
+    \end{equation}</script><p>$\textbf{w}$的最优解:</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+    \begin{aligned}
+    \textbf{w}^*&=\arg \max_{\textbf{w}} L(\textbf{w})\\
+    &=\arg \max_{\textbf{w}} \prod_{i=1}^{n} \mathcal{N}(\textbf{w}^{T}\textbf{x}^{(i)},\sigma^2)\\
+    &=\arg \max_{\textbf{w}} \ln \prod_{i=1}^{n} \mathcal{N}(\textbf{w}^{T}\textbf{x}^{(i)},\sigma^2) \\
+    &=\arg \max_{\textbf{w}} \sum_{i=1}^{n} \ln  \mathcal{N}(\textbf{w}^{T}\textbf{x}^{(i)},\sigma^2) \\
+    &=\arg \max_{\textbf{w}} \sum_{i=1}^{n} \ln  
+    (\frac{1}{\sigma \sqrt{2\pi}}
+    \exp (-\frac{(y^{(i)}-\textbf{w}^{T}\textbf{x}^{(i)})^2}{2\sigma ^2})) \\
+    &=\arg \max_{\textbf{w}} (n\ln \frac{1}{\sigma \sqrt{2\pi}}
+    -\sum_{i=1}^{n} \frac{(y^{(i)}-\textbf{w}^{T}\textbf{x}^{(i)})^2}{2\sigma ^2}) \\
+    &=\arg \min_{\textbf{w}} \sum_{i=1}^{n}(y^{(i)}-\textbf{w}^{T}\textbf{x}^{(i)})^2
+    \end{aligned}
+    \end{equation}</script><p>这与<a href="https://linbaijiong.github.io/2018/02/01/线性回归-从入门到放弃">LSR</a>的cost function是一致的。</p>
+<h4 id="极大似然估计的缺陷"><a href="#极大似然估计的缺陷" class="headerlink" title="极大似然估计的缺陷"></a>极大似然估计的缺陷</h4><p>极大似然估计要求概率分布已知，其准确性严重依赖于所假设的概率分布形式是否符合潜在的真实数据分布.在现实应用中，欲做出能较好地接近潜在真实分布的假设，往往需要在一定程度上利用任务本身的<strong>历史经验</strong>知识。下面通过一个教材的例子来说明这一点。</p>
+<p>据调查某地区居民的肝癌发病率为0.0004，若记”该地区居民患肝癌”为事件$B_1$，并记$B_2=\bar{B_1}$,则</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+        P(B_1)=0.0004,P(B_2)=0.9996
+    \end{equation}</script><p>现用甲胎蛋白法检查肝癌。若呈阴性，表明不患肝癌，若呈阳性，表明患肝癌。由于技术和操作不完善以及种种特殊原因，是肝癌者未必检出阳性，不是患者也有可能呈阳性反应。据多次实验统计，这两种错误的发生概率为:</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+        P(\bar{A}|B_1)=0.01,P(A|B_2)=0.05
+    \end{equation}</script><p>其中事件A表示“阳性”。</p>
+<p>那么假如某人检出阳性，<strong>根据似然函数$P(A|B_1)=0.99$,这个人应该有0.99的可能是一个肝癌患者</strong>，但假如我们用贝叶斯公式：</p>
+<script type="math/tex; mode=display">
+\begin{equation}
+        P(B_1|A)=\frac{0.99\times 0.0004}{0.99\times 0.0004+0.05\times 0.9996}=0.00786
+    \end{equation}</script><p>也就是说在检出阳性的人中，<strong>只有0.007左右的人是肝癌患者</strong>，这是由于肝癌发病率太低的缘故。</p>
+
       
     </div>
     
@@ -726,6 +455,12 @@
 
     <div>
     
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+    
     </div>
 
     
@@ -733,189 +468,61 @@
     
 
     
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    学渣渣
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://LinBaiJiong.github.io/2018/03/04/极大似然估计/" title="极大似然估计">http://LinBaiJiong.github.io/2018/03/04/极大似然估计/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://LinBaiJiong.github.io/2018/02/01/线性回归-从入门到放弃/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="学渣渣">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="LinBaiJiong">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/01/线性回归-从入门到放弃/" itemprop="url">线性回归--从入门到放弃</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-01T16:22:31+08:00">
-                2018-02-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/02/01/线性回归-从入门到放弃/" class="leancloud_visitors" data-flag-title="线性回归--从入门到放弃">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数&#58;</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-             <span>次</span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计&#58;</span>
-                
-                <span title="字数统计">
-                  933
-                </span>
-                <span>字</span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
-                
-                <span title="阅读时长">
-                  4
-                </span>
-                <span>分钟</span>
-              
-            </div>
-          
-
+            <a href="/tags/机器学习/" rel="tag"><i class="fa fa-tag"></i>机器学习</a>
           
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <h4 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h4><p>线性回归(Linear Regression)模型是机器学习的入门，本文解法的基础是最小二乘法，这在高中我们已经学习过了，当然在以后我们会使用新的方法如极大似然估计(MLE)和最大后验估计(MAP)。多元线性回归会稍微复杂一些，这涉及到向量化的思想。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/02/01/线性回归-从入门到放弃/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/02/07/Hexo下Next主题美化-一-数学公式的渲染/" rel="next" title="Hexo下Next主题美化(一)数学公式的渲染">
+                <i class="fa fa-chevron-left"></i> Hexo下Next主题美化(一)数学公式的渲染
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
-    <div>
-    
-    </div>
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/03/30/从GPLT总结C-C-的几种输入/" rel="prev" title="从GPLT总结C/C++的几种输入">
+                从GPLT总结C/C++的几种输入 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -925,10 +532,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -936,6 +544,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzgxMi8xMDM2NQ=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -956,8 +573,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -1034,6 +660,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#似然函数"><span class="nav-number">2.</span> <span class="nav-text">似然函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个MLE的经典例子"><span class="nav-number">3.</span> <span class="nav-text">一个MLE的经典例子</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#极大似然估计与最小二乘法"><span class="nav-number">4.</span> <span class="nav-text">极大似然估计与最小二乘法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#极大似然估计的缺陷"><span class="nav-number">5.</span> <span class="nav-text">极大似然估计的缺陷</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1195,6 +837,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1223,6 +869,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
